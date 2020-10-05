@@ -4,7 +4,7 @@
 
 # variable stores a dictionary to create our game board
 theBoard = {'7': ' ', '8': ' ', '9': ' ',
-            '4': ' ', '3': ' ', '2': ' ',
+            '4': ' ', '5': ' ', '6': ' ',
             '1': ' ', '2': ' ', '3': ' '}
 
 board_keys = []
@@ -33,7 +33,7 @@ def game():
         move = input()
 
         if theBoard[move] == ' ':
-            theBoard[move] == turn
+            theBoard[move] = turn
             count += 1
         else: 
             print("That place is already filled.\nMove to which place?")
@@ -100,7 +100,7 @@ def game():
             for key in board_keys:
                 theBoard[key] = " "
             
-             game()
+            game()
              
 if __name__ == "__main__":
     game()
