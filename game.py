@@ -26,7 +26,7 @@ def game():
     turn = 'X'
     count = 0
 
-    for i in range(10):
+    while True:
         printBoard(theBoard)
         print("It's your turn," + turn + ". Move to which place?")
 
@@ -86,6 +86,7 @@ def game():
         if count == 9: 
             print("\nGame Over.\n")
             print("It's a Tie!")
+            break
         
         # Change player after every move
         if turn == 'X':
